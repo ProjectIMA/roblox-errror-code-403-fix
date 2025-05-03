@@ -21,7 +21,7 @@ This batch script is designed to **clear Roblox's local application data** in an
 ## How to Use
 
 1. **Download or clone** this repository
-2. **Right-click** on `reset_roblox.bat` and select **"Run as Administrator"**
+2. **Right-click** on `403_error_fix.bat` and select **"Run as Administrator"**
 3. Follow the prompts:
    - Confirm data wipe
    - Choose whether to reinstall Roblox
