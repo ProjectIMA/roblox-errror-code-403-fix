@@ -6,10 +6,18 @@ set "robloxInstallerPath=%TEMP%\RobloxPlayerLauncher.exe"
 
 :confirm
 set /p userConfirm="Are you sure that you would like to proceed? Your Roblox settings might get reset (Y/N): "
-if /i "%userConfirm%"=="Y" goto delete
+if /i "%userConfirm%"=="Y" goto close
 if /i "%userConfirm%"=="N" goto end
 echo Invalid input. Please type Y or N.
 goto confirm
+
+:close
+echo Closing any running Roblox processes...
+taskkill /f /im RobloxPlayerBeta.exe >nul 2>&1
+taskkill /f /im RobloxStudioBeta.exe >nul 2>&1
+taskkill /f /im RobloxPlayerLauncher.exe >nul 2>&1
+taskkill /f /im RobloxCrashHandler.exe >nul 2>&1
+echo Processes closed.
 
 :delete
 echo Cleaning Roblox Local AppData contents...
